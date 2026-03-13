@@ -1,4 +1,4 @@
-document.getElementById('frequently-section').style.display = "none";
+// document.getElementById('frequently-section').style.display = "none";
 
 
 document.getElementById('faq-btn').addEventListener('click', function () {
@@ -53,4 +53,9 @@ fetch("https://openapi.programming-hero.com/api/level/5")
 function cradBox(level) {
 
     const cradSection = document.getElementById("crad-section");
+
+    for (let levels of level) {
+        const createElement = document.createElement("div")
+        createElement.innerText =`level ${level.level}`
+    }
 };
