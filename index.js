@@ -46,3 +46,10 @@ function btnLesson(levels) {
 // ------------------------------------------------------------------------------------------------------------------------
 
 
+fetch("https://openapi.programming-hero.com/api/level/5")
+.then(res => res.json())
+.then(data => cradBox(data.data));
+
+function cradBox (level){
+    
+}
