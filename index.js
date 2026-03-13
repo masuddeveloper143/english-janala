@@ -28,15 +28,15 @@ document.getElementById('learn-btn').addEventListener('click', function () {
 fetch("https://openapi.programming-hero.com/api/levels/all")
     .then(res => res.json())
     .then(data => btnLesson(data.data));
- 
+
 function btnLesson(levels) {
     // console.log(btnLesson7);
     const btnLesson6 = document.getElementById("btn-lesson-7");
 
-    for(let level of levels){
+    for (let level of levels) {
         const button = document.createElement("button");
         button.innerText = `lesson ${level.level_no}`;
-        button.classList.add("btn", "hover:bg-blue-500","hover:text-white", "border","border-blue-500");
+        button.classList.add("btn", "hover:bg-blue-500", "hover:text-white", "border", "border-blue-500");
 
 
         btnLesson6.appendChild(button);
@@ -47,9 +47,10 @@ function btnLesson(levels) {
 
 
 fetch("https://openapi.programming-hero.com/api/level/5")
-.then(res => res.json())
-.then(data => cradBox(data.data));
+    .then(res => res.json())
+    .then(data => cradBox(data.data));
 
-function cradBox (level){
-    
-}
+function cradBox(level) {
+
+    const cradSection = document.getElementById("crad-section");
+};
