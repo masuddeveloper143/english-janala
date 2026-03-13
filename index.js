@@ -25,19 +25,20 @@ document.getElementById('learn-btn').addEventListener('click', function () {
 
 fetch("https://openapi.programming-hero.com/api/levels/all")
     .then(res => res.json())
-    .then(data => btnLesson7(data.data));
+    .then(data => btnLesson(data.data));
 
 
 
 // btn-lesson-7 api clle 
-function btnLesson7(btnlesson7) {
+function btnLesson(levels) {
     // console.log(btnLesson7);
     const btnLesson6 = document.getElementById("btn-lesson-7");
 
-    for(let level of btnLesson7){
-        const btn7 = document.createElement("button");
-        btn7.innerText = `level ${level.level_no}`;
+    for(let level of levels){
+        const button = document.createElement("button");
+        button.innerText = `level ${level.level_no}`;
+        button.classList.add("btn");
 
-        btnLesson6.appendChild(btn7);
+        btnLesson6.appendChild(button);
     }
 };
