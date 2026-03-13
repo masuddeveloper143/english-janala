@@ -22,3 +22,22 @@ document.getElementById('learn-btn').addEventListener('click', function () {
     document.getElementById('hero-section').style.display = "none";
 
 });
+
+fetch("https://openapi.programming-hero.com/api/levels/all")
+    .then(res => res.json())
+    .then(data => btnLesson7(data.data));
+
+
+
+// btn-lesson-7 api clle 
+function btnLesson7(btnlesson7) {
+    // console.log(btnLesson7);
+    const btnLesson6 = document.getElementById("btn-lesson-7");
+
+    for(let level of btnLesson7){
+        const btn7 = document.createElement("button");
+        btn7.innerText = `level ${level.level_no}`;
+
+        btnLesson6.appendChild(btn7);
+    }
+};
