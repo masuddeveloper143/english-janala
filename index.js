@@ -46,16 +46,36 @@ function btnLesson(levels) {
 // ------------------------------------------------------------------------------------------------------------------------
 
 
+// fetch("https://openapi.programming-hero.com/api/level/5")
+//     .then(res => res.json())
+//     .then(data => cradBox(data.data));
+
+// function cradBox(level) {
+
+//     const cradSection = document.getElementById("crad-section");
+
+//     for (let levels of level) {
+//         const createElement = document.createElement("div")
+//         createElement.innerText =`level ${level.level}`
+//     }
+// };
+
+
 fetch("https://openapi.programming-hero.com/api/level/5")
     .then(res => res.json())
     .then(data => cradBox(data.data));
 
-function cradBox(level) {
-
+function cradBox(words) {
     const cradSection = document.getElementById("crad-section");
 
-    for (let levels of level) {
-        const createElement = document.createElement("div")
-        createElement.innerText =`level ${level.level}`
+    for (let word of words) {
+        const createElement = document.createElement("div");
+
+        // Tailwind CSS দিয়ে card style দিতে পারো
+        createElement.classList.add("border", "p-4", "m-2", "rounded", "shadow");
+
+        createElement.innerText = `${word.word} - ${word.definition}`;
+
+        cradSection.appendChild(createElement);
     }
-};
+}
