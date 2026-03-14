@@ -3,18 +3,18 @@
 
 // Logout button cliked function 
 
-const logoutBtn = document.getElementById("logout-btn")
+// const logoutBtn = document.getElementById("logout-btn")
 
-logoutBtn.addEventListener("click", function () {
+// logoutBtn.addEventListener("click", function () {
 
-    document.getElementById("hero-section").style.display = "block"
-    document.getElementById("navbar").style.display = "block"
+//     document.getElementById("hero-section").style.display = "block"
+//     document.getElementById("navbar").style.display = "block"
 
-    // document.getElementById("navbar").classList.add("hidden")
-    // document.getElementById("vocabulary").classList.add("hidden")
-    // document.getElementById("faq").classList.add("hidden")
+//     // document.getElementById("navbar").classList.add("hidden")
+//     // document.getElementById("vocabulary").classList.add("hidden")
+//     // document.getElementById("faq").classList.add("hidden")
 
-});
+// });
 
 // 5️⃣ Load Lesson Buttons (API-01)
 
@@ -31,11 +31,11 @@ function showLessons(levels) {
 
         const btn = document.createElement("button")
 
-        btn.innerText = level.level_no
+        btn.innerText = `Lesson ${level.level_no}`;
 
-        btn.className = "bg-blue-500 text-white px-5 py-2 rounded"
+        btn.className = "bg-blue-500 text-white px-5 py-2 rounded",
 
-        btn.onclick = () => loadWords(level.level_no)
+            btn.onclick = () => loadWords(level.level_no)
 
         container.appendChild(btn)
 
@@ -109,20 +109,39 @@ Synonyms: ${word.synonyms}
 }
 
 
-// 9️⃣ Smooth Scroll
+// 9️⃣ Smooth Scroll FAQ BUTTON 
+
+document.getElementById("faq-btn").addEventListener("click", function () {
 
 
-function scrollToFAQ() {
-    document.getElementById("faq-btn").scrollIntoView({
+    document.getElementById("faqs-ection").scrollIntoView({
         behavior: "smooth"
-    })
-}
+    });
+});
 
-function scrollToLearn() {
+
+// 9️⃣ Smooth Scroll lern BUTTON 
+
+
+document.getElementById("learn-btn").addEventListener("click", function () {
+
+
     document.getElementById("vocabulary-section").scrollIntoView({
         behavior: "smooth"
-    })
-}
+    });
+});
+
+// function scrollToFAQ() {
+//     document.getElementById("faqs-ection").scrollIntoView({
+//         behavior: "smooth"
+//     })
+// }
+
+// function scrollToLearn() {
+//     document.getElementById("vocabulary-section").scrollIntoView({
+//         behavior: "smooth"
+//     })
+// }
 
 
 // 🔟 Loading Spinner
