@@ -9,7 +9,7 @@ gretStratbtn.addEventListener("click", function () {
 
     if (inpuNmae === "masud" && inpuPassword === "123456") {
 
-        window.location.href = "login.js";
+        window.location.href = "index.html";
         // document.getElementById("hero-section").style.display = "none"
         // document.getElementById("navbar").style.display = "block"
         alert("Login successful");
