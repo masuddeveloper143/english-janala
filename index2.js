@@ -22,9 +22,9 @@ gretStratbtn.addEventListener("click", function () {
 
     document.getElementById("heroSection").style.display = "none"
 
-    document.getElementById("navbar").classList.remove("hidden")
-    document.getElementById("vocabulary").classList.remove("hidden")
-    document.getElementById("faq").classList.remove("hidden")
+    // document.getElementById("navbar").classList.remove("hidden")
+    // document.getElementById("vocabulary").classList.remove("hidden")
+    // document.getElementById("faq").classList.remove("hidden")
 });
 
 
