@@ -45,8 +45,29 @@ logoutBtn.addEventListener("click", function () {
 // 5️⃣ Load Lesson Buttons (API-01)
 
 fetch("https://openapi.programming-hero.com/api/levels/all")
-.then(res => res.json())
-.then(data => showLessons(data.data))
+    .then(res => res.json())
+    .then(data => showLessons(data.data))
+
+
+function showLessons(levels) {
+
+    const container = document.getElementById("hero-section")
+
+    levels.forEach(level => {
+
+        const btn = document.createElement("button")
+
+        btn.innerText = level.level_no
+
+        btn.className = "bg-blue-500 text-white px-5 py-2 rounded"
+
+        btn.onclick = () => loadWords(level.level_no)
+
+        container.appendChild(btn)
+
+    })
+
+}
 
 
 
