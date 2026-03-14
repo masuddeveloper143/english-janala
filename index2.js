@@ -1,5 +1,7 @@
 const gretStratbtn = document.getElementById("loginBtn");
 
+
+// login section 
 gretStratbtn.addEventListener("click", function () {
     // .trim() use korle space thakleo problem hobe na
     const inpuNmae = document.getElementById("nameinput").value.trim();
@@ -17,3 +19,6 @@ gretStratbtn.addEventListener("click", function () {
         alert("Password must be 123456");
     }
 });
+
+ 
+
