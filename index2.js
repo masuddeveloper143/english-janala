@@ -70,5 +70,94 @@ function showLessons(levels) {
 }
 
 
+// 6️⃣ Load Words (API-02)
+
+function loadWords(level) {
+
+    fetch(`https://openapi.programming-hero.com/api/level/${level}`)
+        .then(res => res.json())
+        .then(data => displayWords(data.data))
+
+};
+
+
+
+// 7️⃣ Show Words
+
+function displayWords(words) {
+
+    const container = document.getElementById("word-container")
+
+    container.innerHTML = ""
+
+    if (words.length === 0) {
+        container.innerHTML = "<h1>No Word Found</h1>"
+        return
+    }
+
+    words.forEach(word => {
+
+        const card = document.createElement("div")
+
+        card.className = "bg-white p-5 rounded shadow"
+
+        card.innerHTML = `
+<h2 class="text-xl font-bold">${word.word}</h2>
+<p>${word.meaning}</p>
+<p>${word.pronunciation}</p>
+<button onclick="loadDetails(${word.id})">Details</button>
+`
+
+        container.appendChild(card)
+
+    })
+
+}
+
+// 8️⃣ Word Details (API-03)
+
+function loadDetails(id) {
+
+    fetch(`https://openapi.programming-hero.com/api/word/${id}`)
+        .then(res => res.json())
+        .then(data => {
+
+            const word = data.data
+
+            alert(`
+Word: ${word.word}
+Example: ${word.example}
+Synonyms: ${word.synonyms}
+`)
+
+        })
+
+}
+
+
+// 9️⃣ Smooth Scroll
+
+
+function scrollToFAQ() {
+    document.getElementById("faq").scrollIntoView({
+        behavior: "smooth"
+    })
+}
+
+function scrollToLearn() {
+    document.getElementById("vocabulary").scrollIntoView({
+        behavior: "smooth"
+    })
+}
+
+
+// 🔟 Loading Spinner
+
+
+document.getElementById("spinner").classList.remove("hidden");
+
+
+
+
 
 
