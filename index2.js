@@ -1,5 +1,5 @@
 const gretStratbtn = document.getElementById("login-btn");
-
+document.getElementById("navbar").style.display = "none"
 
 // login section 
 gretStratbtn.addEventListener("click", function () {
@@ -11,6 +11,8 @@ gretStratbtn.addEventListener("click", function () {
         alert("Login successful");
         // Ekhane apni chaile onno page-e niye jete paren
         // window.location.href = "dashboard.html"; 
+        document.getElementById("heroSection").style.display = "none"
+    document.getElementById("navbar").style.display = "block"
     }
     else if (inpuNmae !== "masud") {
         alert("Please enter the correct name"); // Console-er poriborte Alert
@@ -20,7 +22,7 @@ gretStratbtn.addEventListener("click", function () {
     }
 
 
-    document.getElementById("heroSection").style.display = "none"
+    
 
     // document.getElementById("navbar").classList.remove("hidden")
     // document.getElementById("vocabulary").classList.remove("hidden")
