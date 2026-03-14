@@ -18,7 +18,30 @@ gretStratbtn.addEventListener("click", function () {
     else {
         alert("Password must be 123456");
     }
+
+
+    document.getElementById("heroSection").style.display = "none"
+
+    document.getElementById("navbar").classList.remove("hidden")
+    document.getElementById("vocabulary").classList.remove("hidden")
+    document.getElementById("faq").classList.remove("hidden")
 });
+
+
+// Logout button cliked function 
+
+const logoutBtn = document.getElementById("logout-btn")
+
+logoutBtn.addEventListener("click", function () {
+
+    document.getElementById("heroSection").style.display = "block"
+
+    document.getElementById("navbar").classList.add("hidden")
+    document.getElementById("vocabulary").classList.add("hidden")
+    document.getElementById("faq").classList.add("hidden")
+
+});
+
 
 
 
