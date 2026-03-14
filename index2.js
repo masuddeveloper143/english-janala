@@ -42,6 +42,12 @@ logoutBtn.addEventListener("click", function () {
 
 });
 
+// 5️⃣ Load Lesson Buttons (API-01)
+
+fetch("https://openapi.programming-hero.com/api/levels/all")
+.then(res => res.json())
+.then(data => showLessons(data.data))
+
 
 
 
