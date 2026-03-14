@@ -51,7 +51,7 @@ fetch("https://openapi.programming-hero.com/api/levels/all")
 
 function showLessons(levels) {
 
-    const container = document.getElementById("hero-section")
+    const container = document.getElementById("lesson-container")
 
     levels.forEach(level => {
 
@@ -86,7 +86,7 @@ function loadWords(level) {
 
 function displayWords(words) {
 
-    const container = document.getElementById("word-container")
+    const container = document.getElementById("card-container")
 
     container.innerHTML = ""
 
