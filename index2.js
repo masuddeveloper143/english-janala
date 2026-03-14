@@ -139,13 +139,13 @@ Synonyms: ${word.synonyms}
 
 
 function scrollToFAQ() {
-    document.getElementById("faq").scrollIntoView({
+    document.getElementById("faq-btn").scrollIntoView({
         behavior: "smooth"
     })
 }
 
 function scrollToLearn() {
-    document.getElementById("vocabulary").scrollIntoView({
+    document.getElementById("vocabulary-section").scrollIntoView({
         behavior: "smooth"
     })
 }
