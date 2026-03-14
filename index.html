@@ -17,7 +17,7 @@
 
     <header class="">
         <section class="h-16 bg-red-500 bg-transparent backdrop-blur-sm fixed top-0 left-0 w-full shadow">
-            <nav class="w-[1280px] mx-auto flex items-center justify-between py-3 ">
+            <nav class="w-[1280px] mx-auto flex items-center justify-between py-3 " class="hidden">
                 <div class="flex ">
                     <h2 class="font-bold">English</h2>
                     <img class="w-5" src="./assets/logo.png" alt="">
@@ -46,7 +46,7 @@
 
                         Learn
                     </button>
-                    <button class="btn btn-soft btn-primary">
+                    <button id="logoutBtn" class="btn btn-soft btn-primary">
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4">
                             <path fillRule="evenodd"
@@ -72,11 +72,11 @@
                 <p class="w-5/7 mb-6">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা
                     বাড়াতে চান, আমাদের
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                <input class="p-1 w-52" type="text" placeholder="Enter Your Name">
+                <input id="nameInput" class="p-1 w-52" type="text" placeholder="Enter Your Name">
                 <br><br>
-                <input class="p-1 w-52" type="password" placeholder="Enter Login Cood (123456)">
+                <input id="passwordInput" class="p-1 w-52" type="password" placeholder="Enter Login Cood (123456)">
                 <br><br>
-                <button class="btn btn-primary">Get Startad</button>
+                <button id="loginBtn" class="btn btn-primary">Get Startad</button>
             </div>
             <div>
                 <img class="w-full h-full object-cover" src="./assets/hero-student.png" alt="">
