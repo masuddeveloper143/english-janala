@@ -131,6 +131,11 @@ document.getElementById("learn-btn").addEventListener("click", function () {
     });
 });
 
+// 9️⃣ WINDOW.LOCATION.HREF LOGOUT BUTTON 
+document.getElementById("logout-btn").addEventListener("click", function () {
+    window.location.href = "login.html"
+})
+
 // function scrollToFAQ() {
 //     document.getElementById("faqs-ection").scrollIntoView({
 //         behavior: "smooth"
