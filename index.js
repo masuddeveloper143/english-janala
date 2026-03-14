@@ -78,4 +78,3 @@ function cradBox(words) {
 
         cradSection.appendChild(createElement);
     }
-}
