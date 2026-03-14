@@ -4,394 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <!-- daisyUi  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <title>English Janala</title>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- style css link  -->
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
 
-    <header class="">
-        <section class="hidden h-16 bg-red-500 bg-transparent backdrop-blur-sm fixed top-0 left-0 w-full shadow">
-            <nav class="w-[1280px] mx-auto flex items-center justify-between py-3 " class="hidden">
-                <div class="flex ">
-                    <h2 class="font-bold">English</h2>
-                    <img class="w-5" src="./assets/logo.png" alt="">
-                    <h2>জানালা</h2>
-                </div>
-                <div class="flex items-center gap-10">
-                    <button id="faq-btn" class="btn btn-soft btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                            stroke="currentColor" class="w-4">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                        </svg>
+<body class="bg-gray-100">
 
 
-                        FAQ
+    <!-- ================= NAVBAR ================= -->
 
-                    </button>
-                    <button id="learn-btn" class="btn btn-soft btn-primary">
+    <header id="navbar" class=" fixed top-0 left-0 w-full bg-white shadow z-50">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-4">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                        </svg>
+        <nav class="max-w-[1280px] mx-auto flex justify-between items-center py-4">
 
-
-                        Learn
-                    </button>
-                    <button id="logoutBtn" class="btn btn-soft btn-primary">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4">
-                            <path fillRule="evenodd"
-                                d="M14 4.75A2.75 2.75 0 0 0 11.25 2h-3A2.75 2.75 0 0 0 5.5 4.75v.5a.75.75 0 0 0 1.5 0v-.5c0-.69.56-1.25 1.25-1.25h3c.69 0 1.25.56 1.25 1.25v6.5c0 .69-.56 1.25-1.25 1.25h-3c-.69 0-1.25-.56-1.25-1.25v-.5a.75.75 0 0 0-1.5 0v.5A2.75 2.75 0 0 0 8.25 14h3A2.75 2.75 0 0 0 14 11.25v-6.5Zm-9.47.47a.75.75 0 0 0-1.06 0L1.22 7.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 1 0 1.06-1.06l-.97-.97h7.19a.75.75 0 0 0 0-1.5H3.56l.97-.97a.75.75 0 0 0 0-1.06Z"
-                                clipRule="evenodd" />
-                        </svg>
-
-
-                        Logut</button>
-                </div>
-            </nav>
-        </section>
-
-
-
-        <!-- hero sectio strat  -->
-
-        <section id="hero-section" class="hero-section w-[1280px] mx-auto mt-10 flex items-center justify-between">
-
-
-            <div>
-                <h1 class="text-3xl font-bold mb-2"> <span class="text-sky-400">English</span> is Easy!!</h1>
-                <p class="w-5/7 mb-6">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা
-                    বাড়াতে চান, আমাদের
-                    Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                <input id="nameinput" class="p-1 w-52" type="text" placeholder="Enter Your Name">
-                <br><br>
-                <input id="passwordinput" class="p-1 w-52" type="password" placeholder="Enter Login Cood (123456)">
-                <br><br>
-                <button id="loginBtn" class="btn btn-primary">Get Startad</button>
+            <div class="flex items-center gap-1 font-bold">
+                <span>English</span>
+                <img class="w-6" src="./assets/logo.png">
+                <span>জানালা</span>
             </div>
-            <div>
-                <img class="w-full h-full object-cover" src="./assets/hero-student.png" alt="">
+
+            <div class="flex gap-4">
+
+                <button id="faqBtn" class="btn btn-soft btn-primary">
+                    FAQ
+                </button>
+
+                <button id="learnBtn" class="btn btn-soft btn-primary">
+                    Learn
+                </button>
+
+                <button id="logoutBtn" class="btn btn-soft btn-primary">
+                    Logout
+                </button>
+
             </div>
-        </section>
-        <!-- HERO SECTION FINISHED  -->
+
+        </nav>
+
     </header>
 
 
-    <!-- HEADER SECTION FINISHED  -->
+    <!-- ================= HERO SECTION ================= -->
 
-    <section id="Lets-Learn" class="mt-52">
+    <section id="heroSection" class="max-w-[1280px] mx-auto flex items-center justify-between mt-20">
 
-        <section class="w-[1280px] mx-auto">
+        <div>
 
-            <h1 class="text-3xl font-bold mb-9 text-center "> <span class="text-sky-400">Let's</span> Learn Vocabularies
+            <h1 class="text-4xl font-bold mb-4">
+                <span class="text-sky-500">English</span> is Easy!!
             </h1>
 
-            <!-- button 7 area  -->
-            <div id="btn-lesson-7" class="space-x-8 flex items-center justify-center">
-                 <!-- <button class="btn btn-soft btn-primary">
+            <p class="w-2/3 mb-6">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। Interactive Lessons আপনাকে নতুন Level এ নিয়ে যাবে।
+            </p>
 
+            <input id="name-input" class="border p-2 w-60 mb-3" placeholder="Enter Your Name">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
+            <br>
 
+            <input id="password-input" type="password" class="border p-2 w-60 mb-3"
+                placeholder="Enter Login Code (123456)">
 
-                    Lesson-1
+            <br>
 
-                </button> -->
-                <!-- <button class="btn btn-soft btn-primary">
+            <button id="login-btn" class="btn btn-primary">
+                Get Started
+            </button>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-
-                    Lesson-2</button>
-                <button class="btn btn-soft btn-primary">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-                    Lesson-3</button>
-                <button class="btn btn-soft btn-primary">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-                    Lesson-4</button>
-                <button class="btn btn-soft btn-primary">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-                    Lesson-5</button>
-                <button class="btn btn-soft btn-primary">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-
-                    Lesson-6</button>
-                <button class="btn btn-soft btn-primary">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                    </svg>
-
-                    Lesson-7</button> -->
-            </div>
-
-            <div>
-                <p class="text-sm font-thin mt-8 text-center ">আপনি এখনো কোন Lesson Select করেন ন</p>
-                <h1 class=" text-3xl font-bold mt-6 text-center ">একটি Lesson Select করুন।</h1>
-
-        </section>
-    </section>
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <!-- crad section  -->
-    <section id="crad-section" class="grid grid-cols-3 gap-7 mt-10 ">
-
-        <!-- crad box 1  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1>
-
-            <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
         </div>
 
-
-        <-- crad box 2  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1>
-
-            <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
+        <div>
+            <img class="w-[450px]" src="./assets/hero-student.png">
         </div>
-
-
-        <-- crad box 3  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1> -->
-
-            <!-- <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
-        </div>
-
-
-
-        <-- crad box 4  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1>
-
-            <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
-        </div> -->
-
-
-
-        <!-- crad box 5  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1>
-
-            <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
-        </div> -->
-
-
-
-        <!-- crad box 6  -->
-        <!-- <div class="bg-slate-200 p-10 rounded-md">
-            <h1 class="font-bold text-center mb-2">Eager</h1>
-            <p class="font-bold text-center mb-2">Meaning /Pronounciation</p>
-            <h1 class="font-bold text-center mb-2">"আগ্রহী / ইগার"</h1>
-
-            <div class="flex items-center justify-between ">
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="currentColor" class="w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round"
-                        d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-                </svg>
-
-
-            </div>
-        </div>  -->
-
 
     </section>
 
-    <!-- ----------------------------------------------------------------------------------- -->
 
-    <section id="frequently-section" class=" mt-20">
+    <!-- ================= VOCABULARY SECTION ================= -->
 
+    <section id="vocabularySection" class="hidden max-w-[1280px] mx-auto mt-24">
 
-        <h1 class="text-3xl font-bold text-center "> <span class="text-sky-400">Frequently</span> Asked
-            Questions
+        <h1 class="text-3xl font-bold text-center mb-10">
+            <span class="text-sky-500">Let's</span> Learn Vocabularies
         </h1>
 
 
+        <!-- Lesson Buttons -->
+        <div id="lessonContainer" class="flex flex-wrap justify-center gap-4 mb-10">
+        </div>
+
+
+        <!-- Default Message -->
+
+        <div id="defaultMessage" class="text-center">
+
+            <p class="text-sm opacity-70">
+                আপনি এখনো কোন Lesson Select করেন ন
+            </p>
+
+            <h2 class="text-2xl font-bold mt-2">
+                একটি Lesson Select করুন।
+            </h2>
+
+        </div>
+
+
+        <!-- Words Card Container -->
+
+        <div id="cardContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        </div>
+
+    </section>
 
 
 
-        <div class="space-y-4 mt-10">
-            <div class="flex items-center justify-between py-4 px-1 bg-slate-200 rounded-sm">
+    <!-- ================= FAQ SECTION ================= -->
+
+    <section id="faqSection" class="hidden max-w-[1280px] mx-auto mt-24">
+
+        <h1 class="text-3xl font-bold text-center mb-10">
+            <span class="text-sky-500">Frequently</span> Asked Questions
+        </h1>
+
+        <div class="space-y-4">
+
+
+            <div class="bg-slate-200 p-4 rounded">
+
                 <details>
-                    <summary>1. How can I start learning English on this website?</summary>
-                    <p class="opacity-50 text-blue-500">You can start by exploring our beginner lessons, interactive
-                        exercises, and quizzes. We also
-                        offer structured courses to guide you step by step.</p>
+                    <summary class="font-semibold">
+                        Difference between var, let and const?
+                    </summary>
+
+                    <p class="mt-2 opacity-70">
+                        var is function scoped while let and const are block scoped.
+                    </p>
+
                 </details>
-                <p>+</p>
+
             </div>
-            <div class="flex items-center justify-between py-4 px-1 bg-slate-200 rounded-sm">
+
+
+            <div class="bg-slate-200 p-4 rounded">
+
                 <details>
-                    <summary>1. How can I start learning English on this website?</summary>
-                    <p class="opacity-50 text-blue-500">You can start by exploring our beginner lessons, interactive
-                        exercises, and quizzes. We also
-                        offer structured courses to guide you step by step.</p>
+                    <summary class="font-semibold">
+                        Difference between map(), forEach(), filter()?
+                    </summary>
+
+                    <p class="mt-2 opacity-70">
+                        map returns new array, forEach loops, filter returns filtered data.
+                    </p>
+
                 </details>
-                <p>+</p>
+
             </div>
-            <div class="flex items-center justify-between py-4 px-1 bg-slate-200 rounded-sm">
+
+
+            <div class="bg-slate-200 p-4 rounded">
+
                 <details>
-                    <summary>1. How can I start learning English on this website?</summary>
-                    <p class="opacity-50 text-blue-500">You can start by exploring our beginner lessons, interactive
-                        exercises, and quizzes. We also
-                        offer structured courses to guide you step by step.</p>
+                    <summary class="font-semibold">
+                        How JavaScript Promises work?
+                    </summary>
+
+                    <p class="mt-2 opacity-70">
+                        Promises handle asynchronous operations like API calls.
+                    </p>
+
                 </details>
-                <p>+</p>
-            </div>
-            <div class="flex items-center justify-between py-4 px-1 bg-slate-200 rounded-sm">
-                <details>
-                    <summary>1. How can I start learning English on this website?</summary>
-                    <p class="opacity-50 text-blue-500">You can start by exploring our beginner lessons, interactive
-                        exercises, and quizzes. We also
-                        offer structured courses to guide you step by step.</p>
-                </details>
-                <p>+</p>
-            </div>
-            <div class="flex items-center justify-between py-4 px-1 bg-slate-200 rounded-sm">
-                <details>
-                    <summary>1. How can I start learning English on this website?</summary>
-                    <p class="opacity-50 text-blue-500">You can start by exploring our beginner lessons, interactive
-                        exercises, and quizzes. We also
-                        offer structured courses to guide you step by step.</p>
-                </details>
-                <p>+</p>
+
             </div>
 
         </div>
@@ -400,36 +188,60 @@
 
 
 
+    <!-- ================= FOOTER ================= -->
 
-    <section class=" border-t-1 border-red-300 mt-64 mb-0">
-        <footer class=" w-[1280px] mx-auto flex items-center justify-between  ">
+    <footer class="border-t mt-24">
+
+        <div class="max-w-[1280px] mx-auto flex justify-between py-10">
+
             <div>
-                <div class="flex items-center">
-                    <h1 class="font-bold">English</h1>
-                    <img src="./assets/logo.png" alt="">
-                    <p>জানালা</p>
+
+                <div class="flex items-center gap-1 font-bold">
+
+                    <span>English</span>
+                    <img class="w-6" src="./assets/logo.png">
+                    <span>জানালা</span>
+
                 </div>
-                <h1>ইংরেজি শিখুন সহজে</h1>
-                <p class="opacity-50">Providing ED-Tech Applications since 2025</p>
+
+                <p class="mt-2">ইংরেজি শিখুন সহজে</p>
+
+                <p class="text-sm opacity-70">
+                    Providing ED-Tech Applications since 2025
+                </p>
+
             </div>
 
 
             <div>
-                <p>Follow us</p>
-                <div class="flex items-center gap-4">
-                    <img src="./assets/fb-thumb.png" alt="">
-                    <img src="./assets/youtube-thumb.png" alt="">
-                    <img src="./assets/instagram-thumb.png" alt="">
+
+                <p class="font-semibold mb-2">Follow us</p>
+
+                <div class="flex gap-4">
+
+                    <a target="_blank" href="#">
+                        <img src="./assets/fb-thumb.png">
+                    </a>
+
+                    <a target="_blank" href="#">
+                        <img src="./assets/youtube-thumb.png">
+                    </a>
+
+                    <a target="_blank" href="#">
+                        <img src="./assets/instagram-thumb.png">
+                    </a>
+
                 </div>
 
             </div>
 
-        </footer>
-    </section>
+        </div>
 
-    <!-- <script src="index.js"></script> -->
+    </footer>
+
 
     <script src="index2.js"></script>
+
 </body>
 
 </html>

@@ -1,11 +1,11 @@
-const gretStratbtn = document.getElementById("loginBtn");
+const gretStratbtn = document.getElementById("login-btn");
 
 
 // login section 
 gretStratbtn.addEventListener("click", function () {
     // .trim() use korle space thakleo problem hobe na
-    const inpuNmae = document.getElementById("nameinput").value.trim();
-    const inpuPassword = document.getElementById("passwordinput").value.trim();
+    const inpuNmae = document.getElementById("name-input").value.trim();
+    const inpuPassword = document.getElementById("password-input").value.trim();
 
     if (inpuNmae === "masud" && inpuPassword === "123456") {
         alert("Login successful");
@@ -20,5 +20,5 @@ gretStratbtn.addEventListener("click", function () {
     }
 });
 
- 
+
 
