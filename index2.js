@@ -40,11 +40,12 @@ const logoutBtn = document.getElementById("logout-btn")
 
 logoutBtn.addEventListener("click", function () {
 
-    document.getElementById("heroSection").style.display = "block"
+    document.getElementById("hero-section").style.display = "block"
+    document.getElementById("navbar").style.display = "block"
 
-    document.getElementById("navbar").classList.add("hidden")
-    document.getElementById("vocabulary").classList.add("hidden")
-    document.getElementById("faq").classList.add("hidden")
+    // document.getElementById("navbar").classList.add("hidden")
+    // document.getElementById("vocabulary").classList.add("hidden")
+    // document.getElementById("faq").classList.add("hidden")
 
 });
 
