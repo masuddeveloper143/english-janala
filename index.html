@@ -88,7 +88,7 @@
 
     <!-- ================= VOCABULARY SECTION ================= -->
 
-    <section id="vocabulary-section" class=" max-w-[1280px] mx-auto mt-8">
+    <section id="vocabulary-section" class="max-w-[1280px] mx-auto mt-32">
 
         <h1 class="text-3xl font-bold text-center mb-10">
             <span class="text-sky-500">Let's</span> Learn Vocabularies
@@ -102,7 +102,7 @@
 
         <!-- Default Message -->
 
-        <div id="defaultMessage" class="text-center">
+        <div id="default-message" class="text-center">
 
             <p class="text-sm opacity-70">
                 আপনি এখনো কোন Lesson Select করেন ন
@@ -120,20 +120,22 @@
         <dialog id="detailsModal" class="modal">
             <div class="modal-box">
 
-                <h3 id="modalWord" class="text-lg font-bold"></h3>
+                <h3 id="modalWord" class="text-xl font-bold"></h3>
 
-                <p id="modalExample"></p>
+                <p id="modalExample" class="mt-2"></p>
 
-                <p id="modalSynonyms"></p>
+                <p id="modalSynonyms" class="mt-2"></p>
 
                 <div class="modal-action">
-                    <button onclick="closeModal()" class="btn">Complete Learning</button>
+                    <button onclick="closeModal()" class="btn btn-primary">
+                        Complete Learning
+                    </button>
                 </div>
 
             </div>
         </dialog>
 
-     
+
 
 
         <!-- Words Card Container -->
@@ -165,7 +167,7 @@
 
     <!-- ================= FAQ SECTION ================= -->
 
-    <section id="faqs-ection" class=" max-w-[1280px] mx-auto mt-96">
+    <section id="faq-section" class=" max-w-[1280px] mx-auto mt-96">
 
         <h1 class="text-3xl font-bold text-center mb-10">
             <span class="text-sky-500">Frequently</span> Asked Questions

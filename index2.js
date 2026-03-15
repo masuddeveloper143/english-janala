@@ -98,14 +98,14 @@ function displayWords(words) {
         <div class="flex items-center justify-between ">
         
         
-        <button id="info-button" onclick="showDetails(5)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        <button id="info-button" onclick="showDetails(${word.id})""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 strokeWidth={1.5} stroke="currentColor" class="w-6">
                 <path strokeLinecap="round" strokeLinejoin="round"
                     d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
             </svg> </button>
             
             
-   <button id="egger-button" onclick="pronounceWord"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+   <button id="egger-button" onclick="pronounceWord('${word.word}')"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                 stroke="currentColor" class="w-6">
                 <path strokeLinecap="round" strokeLinejoin="round"
                     d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
@@ -154,7 +154,7 @@ function showDetails(id) {
                 "Example: " + word.example
 
             document.getElementById("modalSynonyms").innerText =
-                "Synonyms: " + word.synonyms
+                "Synonyms: " + (word.synonyms?.join(", ") || "No synonyms")
 
             document.getElementById("detailsModal").showModal()
 
@@ -162,14 +162,17 @@ function showDetails(id) {
 
 }
 
-function closeModal(){
-document.getElementById("detailsModal").close()
+function closeModal() {
+    document.getElementById("detailsModal").close()
 }
 
 
 
 
 // --------------------------------------------------------------------------------------------------------------------------
+
+// 🎤 Speaker Button(Assignment requirement)
+
 
 function pronounceWord(word) {
 
@@ -216,7 +219,7 @@ Synonyms: ${word.synonyms}
 document.getElementById("faq-btn").addEventListener("click", function () {
 
 
-    document.getElementById("faqs-ection").scrollIntoView({
+    document.getElementById("faq-section").scrollIntoView({
         behavior: "smooth"
     });
 });
