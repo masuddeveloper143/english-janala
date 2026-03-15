@@ -95,15 +95,25 @@ function displayWords(words) {
         <h1 class="font-bold text-center mb-2">${word.word}</h1>
         <p class="font-bold text-center mb-2">${word.meaning}</p>
         <h1 class="font-bold text-center mb-2">${word.pronunciation}</h1>
-        <div class="flex items-center justify-between "> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6">
+        <div class="flex items-center justify-between ">
+        
+        
+        <button id="info-button" onclick="showDetails(5)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                strokeWidth={1.5} stroke="currentColor" class="w-6">
                 <path strokeLinecap="round" strokeLinejoin="round"
                     d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-            </svg> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+            </svg> </button>
+            
+            
+   <button id="egger-button" onclick="pronounceWord"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                 stroke="currentColor" class="w-6">
                 <path strokeLinecap="round" strokeLinejoin="round"
                     d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
-            </svg> </div>
+            </svg> </button>
+
+
+            
+            </div>
              <div class="flex items-center justify-center">
                 <button id="faq-btn" class="btn btn-soft btn-primary" onclick="loadDetails(${word.id})">
                     details
@@ -125,6 +135,60 @@ function displayWords(words) {
     })
 
 }
+
+
+// --------------------------------------------------------------------------------------------------------------
+
+function showDetails(id) {
+
+    fetch(`https://openapi.programming-hero.com/api/word/${id}`)
+        .then(res => res.json())
+        .then(data => {
+
+            const word = data.data
+
+            document.getElementById("modalWord").innerText =
+                word.word
+
+            document.getElementById("modalExample").innerText =
+                "Example: " + word.example
+
+            document.getElementById("modalSynonyms").innerText =
+                "Synonyms: " + word.synonyms
+
+            document.getElementById("detailsModal").showModal()
+
+        })
+
+}
+
+function closeModal(){
+document.getElementById("detailsModal").close()
+}
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------
+
+function pronounceWord(word) {
+
+    const utterance = new SpeechSynthesisUtterance(word)
+
+    utterance.lang = "en-EN"
+
+    window.speechSynthesis.speak(utterance)
+
+}
+
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 // 8️⃣ Word Details (API-03)
 
